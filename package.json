@@ -1,0 +1,18 @@
+{
+  "name": "test_nodejs",
+  "version": "1.0.0",
+  "description": "test nodejs",
+  "main": "app.js",
+  "author": "default",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "mysql": "^2.18.1",
+    "request": "^2.88.2"
+  },
+  "scripts": {
+    "start": "node app.js"
+  }
+}
