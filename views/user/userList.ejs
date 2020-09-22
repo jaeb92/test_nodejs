@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partial/head') %>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<%- include('../partial/nav') %>
+<body class="container mb-3">
+    <table class="container">
+        <thead>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>AGE</th>
+            <th>EMAIL</th>
+        </thead>
+        <tbody>
+            <% userList.forEach(function(lists) { %>
+            <tr>
+                <td><%- lists.id %></td>
+                <td><%- lists.name %></td>
+                <td><%- lists.age %></td>
+                <td><%- lists.email %></td>
+            </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</body>
+</html>

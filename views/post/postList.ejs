@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partial/head') %>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ 
+</head>
+<%- include('../partial/nav') %>
+<body class="container mb-3">
+    <div class="col-md-12 bg-light text-right">
+        <button type="button" id="btn_write" class="btn btn-secondary right" onclick="location.href='/post/write'">글쓰기</button>
+    </div>
+    <table class="container">
+        <thead>
+            <th>ID</th>
+            <th>TITLE</th>
+            <th>CONTENT</th>
+            <th>WRITER</th>
+            <th>REGDATE</th>
+        </thead>
+        <tbody>
+            <% postList.forEach(function(lists) { %>
+            <tr>
+                <td><%- lists.postid %></td>
+                <td><%- lists.posttitle %></td>
+                <td><%- lists.postcontent %></td>
+                <td><%- lists.postwriter %></td>
+                <td><%- lists.postregdate %></td>
+            </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</body>
+</html>

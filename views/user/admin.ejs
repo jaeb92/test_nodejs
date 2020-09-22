@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partial/head') %>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body class="container mb-3">
+    <%- include('../partial/nav') %>
+    <div class="jumbotron">
+        <form action='/user/register' method='post'>
+            <input type='text' name='name' id='name' placeholder="input user name" />
+            <input type='text' name='age' id='age' placeholder="input user age" />
+            <input type='email' name='email' id='email' placeholder="input user email" />
+            <input type='submit' value='등록'>
+        </form>
+    </div>
+</div>
+</body>
+</html>
