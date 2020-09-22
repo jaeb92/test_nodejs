@@ -20,7 +20,19 @@ router.get('/write', function(req, res) {
 });
 
 router.post('/write', function(req, res) {
-
+    const reqBody = req.body;
+    console.log('reqbody: ', reqBody);
+    const insertData = [
+        reqBody.posttitle,
+        reqBody.postcontent,
+        reqBody.postwriter,
+    ];
+    const sql = 'INSERT INTO POST (posttitle, postcontent, email) VALUES (?, ?, ?)';
+    conn.query(sql, insertData, function(err, results) {
+        if(err) console.log(err);
+        console.log('input id is...' + results);
+    });
+    res.redirect('/post/list');
 })
 
 module.exports = router;
